@@ -149,7 +149,7 @@ footer a:hover{
 
 
 
-/*corredor*/
+
 .camino {
     position: relative;
     overflow: hidden;
@@ -157,27 +157,45 @@ footer a:hover{
 }
 
 
-@keyframes pasando-por-el-camino {
+@keyframes corredor-animacion {
     from {
         left: -5vw;
-        top: -1vw;
+        top: 0vw;
     }
     to {
         left: 105vw;
-        top: -1vw;
+        top: 0vw;
+    }
+}
+@keyframes ciclista-animacion {
+    from {
+        left: -5vw;
+        top: -2vw;
+    }
+    to {
+        left: 105vw;
+        top: -2vw;
     }
 }
 
 
-.camino img {
+ #corredor  {
     height: 100px;
     width: auto;
     position: absolute;
-    animation-name: pasando-por-el-camino;
-    animation-duration: 8s;
+    animation-name: corredor-animacion;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
 }
 
+#ciclista {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    animation-name: ciclista-animacion;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
 
 @media (max-width: 768px) {
     .camino img {
@@ -187,29 +205,7 @@ footer a:hover{
 }
 
 
-/*Ciclista*/
-#ciclista.camino{
-    height: 100px;
-    width: auto;
-    position: absolute;
-    animation-name: ciclista-animacion;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-@keyframes ciclista-animacion {
-    from {
-        left: -5vw;
-        top: 2;
-    }
-    to {
-        left: 105vw;
-        top: 2;
-    }
-}
 
-
-
-/*Canal y kayak*/
 .canal {
     position: relative;
     overflow: hidden;
@@ -218,11 +214,11 @@ footer a:hover{
 
 @keyframes pasando-por-el-canal {
     from {
-        left: 5vw;
+        left: 105vw;
         top: 0;
     }
     to {
-        left: -105vw;
+        left: -10vw;
         top: 0;
     }
 }
@@ -230,8 +226,8 @@ footer a:hover{
     height: 100px;
     width: auto;
     position: absolute;
-    animation-name: pasando-por-el-camino;
-    animation-duration: 15s;
+    animation-name: pasando-por-el-canal;
+    animation-duration: 19s;
     animation-iteration-count: infinite;
 }
 @media (max-width: 768px) {
